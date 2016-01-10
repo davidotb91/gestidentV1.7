@@ -25,7 +25,7 @@
                                            itemValue="#{doctorIDDOCTORItem}"/>
                         </p:selectOneMenu>
                         <p:outputLabel value="#{bundle.CreateCitaLabel_pacienteIDPACIENTE}" for="pacienteIDPACIENTE" />
-                        <p:selectOneMenu id="pacienteIDPACIENTE" value="#{citaController.selected.pacienteIDPACIENTE}" required="true" requiredMessage="#{bundle.EditCitaRequiredMessage_pacienteIDPACIENTE}">
+                        <p:selectOneMenu id="pacienteIDPACIENTE" value="#{usuario.nombre}" required="true" requiredMessage="#{bundle.EditCitaRequiredMessage_pacienteIDPACIENTE}">
                             <f:selectItems value="#{pacienteController.itemsAvailableSelectOne}"
                                            var="pacienteIDPACIENTEItem"
                                            itemValue="#{pacienteIDPACIENTEItem}"/>
