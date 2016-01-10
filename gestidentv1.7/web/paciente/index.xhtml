@@ -13,7 +13,10 @@
 
         <ui:define name="body">
             <h:form >
-                <p:commandButton id="createButton" icon="ui-icon-plus" value="#{bundle.Create}" actionListener="#{pacienteController.prepareCreate}" update=":PacienteCreateForm" oncomplete="PF('PacienteCreateDialog').show()"/>
+                <H5 align="right">
+                    <p:button icon="ui-icon-key" outcome="/faces/Login.xhtml" value="Login"></p:button>
+                    <p:commandButton id="createButton" icon="ui-icon-plus" value="#{bundle.Create}" actionListener="#{pacienteController.prepareCreate}" update=":PacienteCreateForm" oncomplete="PF('PacienteCreateDialog').show()"/>
+                </H5>
             </h:form>
             <h:form id="PacienteListForm">`
 <!--                <p:panel header="#{bundle.ListPacienteTitle}">-->
@@ -27,7 +30,7 @@
             </h:form>
 
             <ui:include src="Create.xhtml"/>
-            
+
         </ui:define>
     </ui:composition>
 
