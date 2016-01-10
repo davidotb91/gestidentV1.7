@@ -20,7 +20,9 @@
                         <p:inputText id="ciPaciente" value="#{pacienteController.selected.ciPaciente}" title="#{bundle.CreatePacienteTitle_ciPaciente}" required="true" requiredMessage="#{bundle.CreatePacienteRequiredMessage_ciPaciente}"/>
                         
                         <p:outputLabel value="#{bundle.CreatePacienteLabel_emailPaciente}" for="emailPaciente" />
-                        <p:inputText label="para" id="emailPaciente" value="#{pacienteController.selected.emailPaciente}" title="#{bundle.CreatePacienteTitle_emailPaciente}" required="true" requiredMessage="#{bundle.CreatePacienteRequiredMessage_emailPaciente}"/>
+                        
+                        <h:inputText id="emailPaciente"  value="#{pacienteController.selected.emailPaciente}" title="#{bundle.CreatePacienteTitle_emailPaciente}" required="true" requiredMessage="#{bundle.CreatePacienteRequiredMessage_emailPaciente}"/>
+                               
                         
                         <p:outputLabel value="#{bundle.CreatePacienteLabel_telefonoFijoPaciente}" for="telefonoFijoPaciente" />
                         <p:inputText id="telefonoFijoPaciente" value="#{pacienteController.selected.telefonoFijoPaciente}" title="#{bundle.CreatePacienteTitle_telefonoFijoPaciente}" required="true" requiredMessage="#{bundle.CreatePacienteRequiredMessage_telefonoFijoPaciente}"/>
@@ -35,7 +37,7 @@
                         <p:outputLabel value="#{bundle.CreatePacienteLabel_fechaNacimiento}" for="fechaNacimiento" />
                         <p:calendar id="fechaNacimiento" pattern="MM/dd/yyyy" value="#{pacienteController.selected.fechaNacimiento}" title="#{bundle.CreatePacienteTitle_fechaNacimiento}" required="true" requiredMessage="#{bundle.CreatePacienteRequiredMessage_fechaNacimiento}" showOn="button"/>
                     </p:panelGrid>
-                    <h:commandButton action="resultado.jsp" actionListener="#{pacienteController.create}" value="#{bundle.Save}" />
+                    <h:commandButton type="submit" action="resultado.jsp" actionListener="#{pacienteController.create}" value="#{bundle.Save}" />
                 </h:panelGroup>
             </h:form>
         </p:dialog>
