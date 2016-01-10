@@ -29,7 +29,7 @@
                         <p:outputLabel value="Vuelva a escribir la Contraseña: " for ="passwordPaciente" />
                         <p:password id="verificadorPaciente" value=" " title="#{bundle.CreatePacienteTitle_passwordPaciente}" required="true" requiredMessage="La validaciòn de contraseña es obligatoria"/>
                         <p:outputLabel value="#{bundle.CreatePacienteLabel_fechaNacimiento}" for="fechaNacimiento" />
-                        <p:calendar id="fechaNacimiento" pattern="MM/dd/yyyy" value="#{pacienteController.selected.fechaNacimiento}" title="#{bundle.EditPacienteTitle_fechaNacimiento}" required="true" requiredMessage="#{bundle.EditPacienteRequiredMessage_fechaNacimiento}" showOn="button"/>
+                        <p:calendar id="fechaNacimiento" pattern="MM/dd/yyyy" value="#{pacienteController.selected.fechaNacimiento}" title="#{bundle.CreatePacienteTitle_fechaNacimiento}" required="true" requiredMessage="#{bundle.CreatePacienteRequiredMessage_fechaNacimiento}" showOn="button"/>
                     </p:panelGrid>
                     <p:commandButton actionListener="#{pacienteController.create}" value="#{bundle.Save}" update="display,:PacienteListForm:datalist,:growl" oncomplete="handleSubmit(args,'PacienteCreateDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="PacienteCreateDialog.hide()"/>
